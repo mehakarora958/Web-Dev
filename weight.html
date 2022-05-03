@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background: #333;
+        }
+    </style>
+
+    <title>Weight Converter</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-fixed ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Harish Sheoran</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+                    <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                    <a class="nav-link" href="https://github.com/sheoranharis" target="_blank">Github</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link " href="https://twitter.com/sheoranharis" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center text-white ">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="display-6 text-center d-inline-flex ">
+                    Unit Converter
+                </h1>
+                <form class="mb-2">
+                    <div class="form-group"></div>
+                    <input id="myInput" type="number" class="form-control form-control-lg"
+                        placeholder="Select Unit type first">
+                </form>
+
+
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-outline-primary" id="length" type="button">Length</button>
+                    <button class="btn btn-outline-primary" id="area" type="button">Area</button>
+                  </div>
+
+
+                <!--<div id="output">
+                    <div class="card text-white bg-info mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Pounds: </h5>
+                            <div id="poundOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-success mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ounce: </h5>
+                            <div id="ozOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-primary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Grams: </h5>
+                            <div id="gmsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-primary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Grams: </h5>
+                            <div id="lengthOutput"></div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div id="outputOne" class="my-3">
+                    <div class="card text-white bg-info mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Meter: </h5>
+                            <div id="meterOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-success mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">KiloMeter: </h5>
+                            <div id="cmsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Miles: </h5>
+                            <div id="mileOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-primary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Inch: </h5>
+                            <div id="inchOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-warning mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Feet: </h5>
+                            <div id="feetOutput"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--area-->
+
+                <div id="areaOutput" class="my-3">
+                    <div class="card text-white bg-info mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">sq yard : </h5>
+                            <div id="sqyardOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-success mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">sq km: </h5>
+                            <div id="sqkmOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">sq ft: </h5>
+                            <div id="sqftOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-primary mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">sq mile: </h5>
+                            <div id="sqmileOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-warning mb-2" style="max-width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">sq cms: </h5>
+                            <div id="sqcmsOutput"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="weight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
